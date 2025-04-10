@@ -1,0 +1,56 @@
+// 1
+const num="42";
+const number = parseInt(num);
+console.log(number);
+
+// 2
+const a = 10;
+const b = 20;
+str = a>b?"a>b":"a<b";
+console.log(str);
+
+//3
+let number = [3, 7, 1, 9, 4];
+console.log(number.sort());
+
+//4
+const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const Nums = nums.filter(num => num % 2 === 0);
+console.log(Nums);
+
+//5
+const add = (a,b)=>a+b;
+console.log(add(5,7));
+
+//6
+function factorial(n){
+  if(n === 0 || n === 1)return 1;
+  else return n * factorial(n - 1);
+}
+console.log(factorial(5));
+
+//7
+const arr = [2, 4, 6, 8, 10];
+var sum = 0;
+for(var i=0; i<5; i++)sum+=arr[i];
+console.log(sum);
+
+//8
+var count = 5;
+var sum = 5;
+while(count--)sum+=count;
+
+//9
+const person = { name: "Alice", age: 25, city: "Taipei" }
+person.age++;
+console.log(person);
+
+//10
+const scores = { Alice: 85, Bob: 92, Charlie: 78 }
+for(name in scores){
+  console.log(`${name} 的分數是 ${scores[name]}`);
+}
+
+
+
+
