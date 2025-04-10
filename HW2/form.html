@@ -1,44 +1,30 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-        <form action="user.php" name="f1" method="post">
-            <input type="text" name="username"><br>
-            <input type="password" name="passwd"><br>
-            <input type="submit"> <input type="reset">
-        </form>
-        <form action="sex.php" name="f3" method="post">
-            <fieldset>
-                性別:
-                <input type="radio" name="sex" value="man">男
-                <input type="radio" name="sex" value="woman">女
-                <br>
-                血型
-                <input type="radio" name="blood" value="A">A
-                <input type="radio" name="blood" value="B">B
-                <input type="radio" name="blood" value="O">O
-                <input type="radio" name="blood" value="AB">AB
-                <br>
-                <input type="submit"> <input type="reset">
-            </fieldset>
-        </form>
-        <form action="address.php" name="f5" method="post">
-            <fieldset>
-            選擇居住區域: 
-            <br>
-            <select name="address" >
-                <option value="北部">北部</option>
-                <option value="西部">西部</option>
-                <option value="南部">南部</option>
-                <option value="東部">東部</option>
-                <option value="離島">離島</option>
-            </select>
-            <br>
-            <input type="submit"> <input type="reset">
-            </fieldset>
-            
-        </form>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Registration Form</h1>
+    <p>Please fill out this form with the required information</p>
+    <form>
+      <fieldset>
+        <label for="first-name">Enter Your First Name: <input id="first-name" name="first-name" type="text" required /></label>
+        <label for="last-name">Enter Your Last Name: <input id="last-name" name="last-name" type="text" required /></label>
+        <label for="email">Enter Your Email: <input id="email" name="email" type="email" required /></label>
+        <label for="new-password">Create a New Password: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required /></label>
+      </fieldset>
+      <fieldset>
+        <legend>Account type (required)</legend>
+        <label for="personal-account"><input id="personal-account" type="radio" name="account-type" class="inline" checked /> Personal</label>
+        <label for="business-account"><input id="business-account" type="radio" name="account-type" class="inline" /> Business</label>
+      </fieldset>
+      
+      <label for="terms-and-conditions">
+        <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+      </label>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
 </html>
