@@ -1,1 +1,104 @@
+參考 Copilot
+1.
+function countLetters(str) {
+    const letterCount = new Map();
+    for (const char of str) {
+        const lowerChar = char.toLowerCase(); 
+        letterCount.set(lowerChar, (letterCount.get(lowerChar) || 0) + 1);
+    }
+    return letterCount;
+}
+
+2. 
+問題:測資的範圍與大小
+function uniqueSorted(arr) {
+    return [...new Set(arr)].sort((a, b) => a - b);
+}
+
+3.
+function sumArray(arr) {
+    int sum = 0;
+    for(int i=0; i<arr.length; i++){
+      sum += arr[i];
+    }
+    return sum;
+}
+
+4.
+function deepMerge(obj1, obj2) {
+    for (const key in obj2) {
+        if (obj2[key] && typeof obj2[key] === 'object' && !Array.isArray(obj2[key])) {
+            obj1[key] = deepMerge(obj1[key] || {}, obj2[key]);
+        } else {
+            obj1[key] = obj2[key];
+        }
+    }
+    return obj1;
+}
+
+5.
+class Animal {
+    constructor(name) {
+        this.name = name; 
+    }
+
+    speak() {
+        return `I am ${this.name}`; // Animal 的 speak 方法
+    }
+}
+
+class Dog extends Animal {
+    speak() {
+        return `Woof! I am ${this.name}`;
+    }
+}
+
+6.
+function filterArray(arr, predicate) {
+    const filteredArray = [];
+    for (const item of arr) {
+        if (predicate(item)) {
+            filteredArray.push(item);
+        }
+    }
+    return filteredArray;
+}
+
+7.
+class Vector {
+    constructor(components) {
+        this.components = components;
+    }
+    add(vector) {
+        if (this.components.length !== vector.components.length) {
+            throw new Error("向量維度不一致，無法相加");
+        }
+        return new Vector(
+            this.components.map((value, index) => value + vector.components[index])
+        );
+    }
+    subtract(vector) {
+        if (this.components.length !== vector.components.length) {
+            throw new Error("向量維度不一致，無法相減");
+        }
+        return new Vector(
+            this.components.map((value, index) => value - vector.components[index])
+        );
+    }
+    dot(vector) {
+        if (this.components.length !== vector.components.length) {
+            throw new Error("向量維度不一致，無法計算內積");
+        }
+        return this.components.reduce(
+            (sum, value, index) => sum + value * vector.components[index],
+            0
+        );
+    }
+
+
+
+
+    
+
+
 
